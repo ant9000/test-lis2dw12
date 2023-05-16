@@ -1,7 +1,7 @@
 #include "platform.h"
 
-i2c_t bus = I2C_DEV(2);
-#define SENSOR_ADDR 0x19
+i2c_t bus = I2C_DEV(LIS2DW12_I2C_DEVICE);
+#define SENSOR_ADDR LIS2DW12_I2C_ADDRESS
 
 int32_t platform_write(void *handle, uint8_t reg, const uint8_t *bufp,
                               uint16_t len)

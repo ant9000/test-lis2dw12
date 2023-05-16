@@ -3,6 +3,13 @@
 #include "periph/gpio.h"
 #include "periph/i2c.h"
 
+#ifndef LIS2DW12_I2C_DEVICE
+#define LIS2DW12_I2C_DEVICE I2C_DEV(0)
+#endif
+#ifndef LIS2DW12_I2C_ADDRESS
+#define LIS2DW12_I2C_ADDRESS   0x19
+#endif
+
 extern i2c_t bus;
 #define SENSOR_BUS bus
 
